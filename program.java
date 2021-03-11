@@ -1,23 +1,6 @@
 
-import java.util.Scanner;
+import java.util.Scanner;//input için fix gerekli
 
-
-
-
-
-
-
-
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author oguzh
- */
 public class program {
 
     public static void main(String[] args) {
@@ -39,25 +22,25 @@ public class program {
             System.out.println("birinci matrisin elemanlarini girin");
             for(i=0;i<a;i++){
                 for(j=0;j<b;j++){
-                    matris1[i][j]=scan.nextInt();
+                    matris1[i][j]=scan.nextInt();//birinci matrisin elemanlarını alır
                 }
                 
             }
             System.out.println("ikinci matrisin elemanlarini girin");
             for(i=0;i<c;i++){
                 for(j=0;j<d;j++){
-                    matris2[i][j]=scan.nextInt();
+                    matris2[i][j]=scan.nextInt();//ikinci matrisin elemanlarını alır
                 }
             }
             //üçüncü matris tanımlama ve çarpma işlemi
             for(i=0;i<a;i++){
                 for(j=0;j<d;j++){
-                    for(k=0;k<b;k++){
+                    for(k=0;k<b;k++){//ilk matris sütün sayısı ile ikinci matrisin satır sayısı aynı olmak zorunda olduğu için üçüncü for'u kullandık
                         matris3[i][j]=matris3[i][j]+matris1[i][k]*matris2[k][j];
                     }
                 }
             }
-            for(i=0;i<a;i++){
+            for(i=0;i<a;i++){//çarpım sonucu oluşan matrisi yazdırır
                 for(j=0;j<d;j++){
                     System.out.print(matris3[i][j]);
                     System.out.print(" ");
